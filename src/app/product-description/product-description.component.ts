@@ -8,11 +8,13 @@ import { Album } from '../album';
   styleUrls: ['./poduct-description.component.css']
 })
 export class ProductDescriptionComponent implements OnInit {
-	albumInfo: Album;
+  albumInfo: Album;
+  errorMessage: string;
   constructor(private _productService: ProductService) { }
   ngOnInit() {
    this._productService.getAlbum(1)
-          .subscribe(response => this.albumInfo = response);
+          .subscribe(response => this.albumInfo = response, 
+              error => this.errorMessage = <any>error);
   }
 
 }
