@@ -3,9 +3,9 @@ import { ProductService } from '../product.service';
 import { Album } from '../album';
 
 @Component({
-  selector: 'app-poduct-description',
-  templateUrl: './poduct-description.component.html',
-  styleUrls: ['./poduct-description.component.css']
+  selector: 'app-product-description',
+  templateUrl: './product-description.component.html',
+  styleUrls: ['./product-description.component.css']
 })
 export class ProductDescriptionComponent implements OnInit {
   albumInfo: Album;
